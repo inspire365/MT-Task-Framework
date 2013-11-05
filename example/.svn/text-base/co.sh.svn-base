@@ -1,0 +1,11 @@
+ #!/usr/bin/env bash
+
+mkdir tmp
+cd tmp
+
+svn co https://svn.yy.duowan.com/repos/src/yyapplications/common/trunk/concurrency common/concurrency
+svn co https://svn.yy.duowan.com/repos/src/yyapplications/common/trunk/utility common/utility
+svn co https://svn.yy.duowan.com/repos/src/yyapplications/common/trunk/log common/log
+svn co https://svn.yy.duowan.com/repos/src/yyapplications/common/trunk/task common/task
+svn co https://svn.yy.duowan.com/repos/src/yyapplications/common/trunk/thread common/thread
+

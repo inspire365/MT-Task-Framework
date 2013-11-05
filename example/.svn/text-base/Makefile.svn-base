@@ -1,0 +1,37 @@
+
+CC = gcc
+CXX = g++
+CC32 = gcc
+
+CXXFLAGS = -Wall -D__STDC_LIMIT_MACROS -D_REENTRANT -Wl,-rpath,
+
+COMMON_INC=./tmp/common
+
+INCLUDE = -I$(COMMON_INC)
+
+APP_SRC = main.cpp \
+	simutask.cpp \
+	$(COMMON_INC)/concurrency/simplelock.cpp \
+	$(COMMON_INC)/thread/thread.cpp \
+	$(COMMON_INC)/concurrency/yysemaphore.cpp \
+	$(COMMON_INC)/task/taskthread.cpp \
+	$(COMMON_INC)/task/taskqueue.cpp \
+	$(COMMON_INC)/task/taskthreadmanager.cpp
+
+APP_OBJ = $(APP_SRC:.cpp=.o)
+
+.SUFFIXES: .o .cpp
+.cpp.o:
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c -o $@ $<
+
+PROGRAM = app_task
+all: app_task
+
+app_task:  $(APP_OBJ) $@
+	$(CXX) -o $@ $(LINK_CXXFLAG) $(INCLUDE) $(APP_OBJ) \
+	-lpthread
+
+clean:
+	$(RM) -r $(PROGRAM) 
+	rm -f *.o
+

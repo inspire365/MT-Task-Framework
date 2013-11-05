@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/!svn/ver/255628/src/yyapplications/common/trunk/task/example
+END
+simutask.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/!svn/ver/255628/src/yyapplications/common/trunk/task/example/simutask.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/!svn/ver/222626/src/yyapplications/common/trunk/task/example/main.cpp
+END
+simutask.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/!svn/ver/255628/src/yyapplications/common/trunk/task/example/simutask.h
+END
+co.sh
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/!svn/ver/222638/src/yyapplications/common/trunk/task/example/co.sh
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/!svn/ver/222626/src/yyapplications/common/trunk/task/example/Makefile
+END

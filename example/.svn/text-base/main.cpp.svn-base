@@ -1,0 +1,49 @@
+#include <iostream>
+#include "simutask.h"
+#include <task/task.h>
+#include <task/taskqueue.h>
+#include <task/taskthreadmanager.h>
+
+using ::yy::common::task::Task;
+using ::yy::common::task::TaskQueue;
+using ::yy::common::task::TaskThreadManager;
+using ::yy::common::task::SimuTask;
+
+using ::std::cout;
+using ::std::endl;
+
+int main(int argc, char** argv)
+{
+
+  TaskQueue task_queue;
+  TaskThreadManager task_thread_manager(5, task_queue);
+  task_thread_manager.Init();
+  task_thread_manager.Start();   // make all threads running
+  cout << "------------------------begin test------------------------------" << endl;
+  Task* tk = NULL;
+  for (int i = 0 ; i < 10; ++i )
+  {
+    tk = new SimuTask(i);
+    task_queue.Push(tk);
+  }
+
+
+  sleep(10);
+  cout << "---------------------- stop thread manager ------------------------------" << endl;
+  // push these tasks to wake the thread to stop
+  task_thread_manager.Stop();
+  for (int i = 0 ; i < 5; ++i )
+  {
+    tk = new SimuTask(0);
+    task_queue.Push(tk);
+  }
+  cout << "---------------------- term thread manager ------------------------------" << endl;
+  task_thread_manager.Term();
+
+  return 0;
+}
+
+
+
+
+

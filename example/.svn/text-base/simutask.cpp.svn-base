@@ -1,0 +1,19 @@
+#include "simutask.h"
+#include <stdio.h>
+
+namespace yy { namespace common { namespace task {
+
+void SimuTask::Execute(
+    void* thread_context,
+    void* app_context)
+{
+  printf("thread pointer: %p, SimuTask value: %d\n", thread_context, value);
+}
+
+void SimuTask::Release()
+{
+  delete this;
+}
+
+}}} // namespace ::yy::common::task
+

@@ -1,0 +1,32 @@
+#ifndef YY_COMMON_TASK_SIMU_H_
+#define YY_COMMON_TASK_SIMU_H_
+
+#include <task/task.h>
+
+namespace yy { namespace common { namespace task {
+
+class SimuTask : public Task
+{
+public:
+
+  SimuTask(int val):
+    value(val) { }
+
+  ~SimuTask() { }
+
+  virtual void Execute(
+    void* thread_context,
+    void* app_context);
+
+  virtual void Release();
+
+private:
+
+  int value;
+
+};
+
+}}} // namespace ::yy::common::task
+
+#endif // YY_COMMON_TASK_SIMU_H_
+
