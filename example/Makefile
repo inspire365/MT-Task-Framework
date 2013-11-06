@@ -12,7 +12,7 @@ INCLUDE = -I$(COMMON_INC)
 APP_SRC = main.cpp \
 	exampletask.cpp \
 	$(COMMON_INC)/simplelock.cpp \
-	$(COMMON_INC)/thread.cpp \
+	$(COMMON_INC)/threadif.cpp \
 	$(COMMON_INC)/sem.cpp \
 	$(COMMON_INC)/taskthread.cpp \
 	$(COMMON_INC)/taskqueue.cpp \

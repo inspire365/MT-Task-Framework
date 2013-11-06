@@ -1,3 +1,10 @@
+/**
+    taskqueue.h
+    Purpose: A default first-in-first-out task queue to hold tasks
+
+    @author Dan, 365days.enjoy%gmail.com
+*/
+
 #ifndef GZ_COMMON_TASK_QUEUE_H_
 #define GZ_COMMON_TASK_QUEUE_H_
 #include <queue>

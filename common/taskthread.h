@@ -1,11 +1,18 @@
+/**
+    taskthread.h
+    Purpose: A default task thread to process the taskqueue tasks
+
+    @author Dan, 365days.enjoy%gmail.com
+*/
+
 #ifndef GZ_COMMON_TASK_THREAD_H_
 #define GZ_COMMON_TASK_THREAD_H_
 
-#include "thread.h"
+#include "threadif.h"
 
 namespace gz { namespace common { namespace task {
 
-using ::gz::common::thread::Thread;
+using ::gz::common::thread::ThreadIf;
 
 // forward declaration
 class TaskQueueIf;
@@ -19,7 +26,7 @@ class TaskQueueIf;
  *  by subclassing to override the virtual bool Action() to
  *  implement specific business logic
  */
-class TaskThread : public Thread
+class TaskThread : public ThreadIf
 {
   public:
 

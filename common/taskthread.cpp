@@ -1,3 +1,10 @@
+/**
+    taskthread.cpp
+    Purpose: A default task thread to process the taskqueue tasks
+
+    @author Dan, 365days.enjoy%gmail.com
+*/
+
 #include "taskthread.h"
 // std
 #include <stdexcept>

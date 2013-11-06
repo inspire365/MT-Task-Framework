@@ -1,3 +1,9 @@
+/**
+    nulltask.h
+    Purpose: A NULL task to wake to waiting thread
+
+    @author Dan, 365days.enjoy%gmail.com
+*/
 #ifndef NULL_TASK_H_
 #define NULL_TASK_H_
 

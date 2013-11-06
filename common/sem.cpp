@@ -1,3 +1,10 @@
+/**
+    sem.cpp
+    Purpose: Semaphore wrapper for Task queue
+
+    @author Dan, 365days.enjoy%gmail.com
+*/
+
 #include "sem.h"
 // std or system
 #include <stdexcept>

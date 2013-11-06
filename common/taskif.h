@@ -1,3 +1,9 @@
+/**
+    taskif.h
+    Purpose: Task Interface for extension
+
+    @author Dan, 365days.enjoy%gmail.com
+*/
 #ifndef GZ_COMMON_TASKIF_H_
 #define GZ_COMMON_TASKIF_H_
 

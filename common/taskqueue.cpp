@@ -1,3 +1,10 @@
+/**
+    taskqueue.cpp
+    Purpose: A default first-in-first-out task queue to hold tasks
+
+    @author Dan, 365days.enjoy%gmail.com
+*/
+
 #include "taskif.h"
 #include "autodone.h"
 #include "taskqueue.h"

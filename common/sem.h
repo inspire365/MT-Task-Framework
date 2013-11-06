@@ -1,3 +1,10 @@
+/**
+    sem.cpp
+    Purpose: Semaphore wrapper for Task queue
+
+    @author Dan, 365days.enjoy%gmail.com
+*/
+
 #ifndef GZ_COMMON_SEMAPHORE_H_
 #define GZ_COMMON_SEMAPHORE_H_
 // std or system

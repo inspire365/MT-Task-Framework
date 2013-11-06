@@ -20,9 +20,8 @@ task_thread_manager.Init();    // should always call Init() and then Start()
 3. Generate your tasks and push them to the queue, the task will execute automatically:
 <code>task_queue.Push(task)</code>
 4. If you need to terminate the framework:<br/>
-<pre><code>
-  task_thread_manager.Stop();
-  task_thread_manager.Term();
+<pre><code>task_thread_manager.Stop();
+task_thread_manager.Term();
 </code></pre>
   should always call in the order first Stop() and then Term(). In some situation that the worker thread may wait for some task so that it can not stop immediatly, you can push some NullTask to wake the worker threads wake to exit.
 
@@ -39,7 +38,7 @@ You can also make use of the framework's flexibility to customize it.<br/>
 
 TODO
 ----
-It can very easy to extend to support Windows
+It can very easy to extend to support Windows. If you have any advices or improvement, Please tell me! Thanks!
 
 
 Acknowledgments
