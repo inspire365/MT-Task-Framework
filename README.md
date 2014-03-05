@@ -34,7 +34,7 @@ You can also make use of the framework's flexibility to customize it.<br/>
    TaskQueue only provide the default firt-come-first-out style queue. You can implement the TaskQueueIf to create your own task queue, such as priority queue. You can also set the queue limit size and some other things.
 2. Customize your own thread behavior.<br/>
    Just implement Thread interface and assembly it into <code>TaskThreadMgr::ConstructTaskThread()</code> and <code>TaskThreadMgr::DestroyTaskThread(TaskThread* thr)</code> will do.
-
+3. For different business tasks. You can also fit this framework to different business requirments. For example, one is    heavy loaded business, others are not. Of course, we should not mix them together. You can instantiate one             task_thread_manager for one business to solve this issue.
 
 TODO
 ----
