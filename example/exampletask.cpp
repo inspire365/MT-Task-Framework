@@ -6,7 +6,9 @@ void ExampleTask::Execute(
     void* thread_context,
     void* app_context)
 {
-  printf("thread pointer: %p, ExampleTask value: %d\n", thread_context, value);
+  int i = 0;
+   ++i;
+  //printf("thread pointer: %p, ExampleTask value: %d\n", thread_context, value);
 }
 
 void ExampleTask::Release()

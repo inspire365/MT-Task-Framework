@@ -2,10 +2,16 @@
 #define GZ_COMMON_LOCK_FREE_QUEUE_H_
 
 #include "sem.h"
+#include "taskqueueif.h"
 #include <boost/atomic.hpp>
 #include <boost/lockfree/queue.hpp>
 
 namespace gz { namespace common { namespace task {
+
+using ::gz::common::concurrency::Semaphore;
+
+/// forward declaration
+class TaskIf;
 
 class LockFreeQueue : public TaskQueueIf
 {
@@ -31,7 +37,7 @@ private:
   uint32_t            queue_threshold_;
   uint32_t            queue_max_limit_;
 
-  boost::atomic_int               queue_size_;
+  boost::atomic_uint32_t          queue_size_;
   boost::lockfree::queue<TaskIf*> queue_;
 
 };   // LockFreeQueue

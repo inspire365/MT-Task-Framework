@@ -15,6 +15,7 @@ APP_SRC = main.cpp \
 	$(COMMON_INC)/threadif.cpp \
 	$(COMMON_INC)/sem.cpp \
 	$(COMMON_INC)/taskthread.cpp \
+	$(COMMON_INC)/lockfreequeue.cpp \
 	$(COMMON_INC)/taskqueue.cpp \
 	$(COMMON_INC)/taskthreadmgr.cpp
 
