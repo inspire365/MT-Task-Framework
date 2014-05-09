@@ -26,6 +26,25 @@ task_thread_manager.Term();
   should always call in the order first Stop() and then Term(). In some situation that the worker thread may wait for some task so that it can not stop immediatly, you can push some NullTask to wake the worker threads wake to exit.
 
 
+
+Improvement
+-------------
+Use boost::lockfree::queue can improve performance than the mutex lock version
+TaskQueue. The following is the comparision of the two with Linux time command
+while executing 10000000 tasks.
+
+mutex lock TaskQueue version:
+real	0m34.266s
+user	0m19.800s
+sys	1m22.050s
+
+boost::lockfree::queue version task queue:
+real	0m12.203s
+user	0m17.943s
+sys	0m17.663s
+
+try the example for yourself.
+
 Advance Usage
 -------------
 You can also make use of the framework's flexibility to customize it.<br/>
@@ -48,13 +67,6 @@ http://www.codeproject.com/Articles/153898/Yet-another-implementation-of-a-lock-
 
 
 If you have any advices or improvement, Please tell me! Thanks!
-
-
-Acknowledgments
----------------
-Two common files(autodone & simplelock) were wrote by my colleague Mr. Yang. I do not want to reinvent ones, Thanks!
-
-
 
 License
 -------
