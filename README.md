@@ -43,6 +43,11 @@ real	0m12.203s
 user	0m17.943s
 sys	0m17.663s
 
+For more information, please visit:
+<Writing Lock-Free Code: A Corrected Queue> http://www.drdobbs.com/parallel/writing-lock-free-code-a-corrected-queue/210604448?pgno=1
+<Yet another implementation of a lock-free circular array queue>
+http://www.codeproject.com/Articles/153898/Yet-another-implementation-of-a-lock-free-circular
+
 try the example for yourself.
 
 Advance Usage
@@ -59,11 +64,6 @@ You can also make use of the framework's flexibility to customize it.<br/>
 TODO
 ----
 1. It can very easy to extend to support Windows. 
-2. Implement lock-free queue for the taskqueue for more high performance. For more information, please visit:
-<Writing Lock-Free Code: A Corrected Queue> http://www.drdobbs.com/parallel/writing-lock-free-code-a-corrected-queue/210604448?pgno=1
-<Yet another implementation of a lock-free circular array queue>
-http://www.codeproject.com/Articles/153898/Yet-another-implementation-of-a-lock-free-circular
-
 
 
 If you have any advices or improvement, Please tell me! Thanks!
